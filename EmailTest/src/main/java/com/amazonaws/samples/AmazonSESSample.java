@@ -30,11 +30,11 @@ import com.amazonaws.services.simpleemail.model.SendEmailRequest;
 
 public class AmazonSESSample {
 
-    final String FROM = "aleckwapis@gmail.com";  // Replace with your "From" address. This address must be verified.
-    final String TO = "alec.w.kwapis@wmich.edu"; // Replace with a "To" address. If you have not yet requested
+    //final String FROM = "aleckwapis@gmail.com";  // Replace with your "From" address. This address must be verified.
+    //final String TO = "alec.w.kwapis@wmich.edu"; // Replace with a "To" address. If you have not yet requested
                                                       // production access, this address must be verified.
-    final String BODY = "This email was sent through Amazon SES by using the AWS SDK for Java.";
-    final String SUBJECT = "Amazon SES test (AWS SDK for Java)";
+    //final String BODY = "This email was sent through Amazon SES by using the AWS SDK for Java.";
+    //final String SUBJECT = "Amazon SES test (AWS SDK for Java)";
 
     /*
      * Before running the code:
@@ -49,8 +49,12 @@ public class AmazonSESSample {
      *      the credentials file in your source directory.
      */
     
-    public AmazonSESSample() {
+    public AmazonSESSample(String name, String email, String SUBJECT, String BODY) {
 
+    	String FROM = "aleckwapis@gmail.com";
+    	String TO = email;
+    	BODY = name + ", " + BODY;
+    	
         // Construct an object to contain the recipient address.
         Destination destination = new Destination().withToAddresses(new String[]{TO});
 
