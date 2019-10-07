@@ -7,6 +7,8 @@ public class Main {
 		System.out.println("Main");
 		
 		AmazonSESSample email = new AmazonSESSample();
+		
+		// This is a test push of the Main class
 
 	}
 
